@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Multi Home</title>
+        <link rel="stylesheet" type="text/css" href="reset.css">
+        <link rel= "stylesheet" href="./SCAP.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://kit.fontawesome.com/50d83b71b0.js" crossorigin="anonymous"></script>
+        </head>
+    <body>
+        <header>
+            <nav>
+                <h1><span>M</span>ulti</h1>
+                <h2><span>HOME</span></h2>
+                <h2>SERVICES</h2>
+                <h2>BLOG</h2>
+                <h2>PORTFOLIO</h2>
+                <h2>CONTACT</h2>
+            </nav>
+
+            <div class="container">
+                <div class="navbar">
+                    <div class="heading">
+                        <a href="#hamburger-icon" onclick="gfgMenu()">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                        <a href="#Home"><span>M</span>ulti</a>
+                    </div>
+                    <div class="links">
+                        <a href="#gfg1">HOME</a>
+                        <a href="#gfg2">SERVICES</a>
+                        <a href="#gfg3">BLOG</a>
+                        <a href="#gfg4">PORTFOLIO</a>
+                        <a href="#gfg5">CONTACT</a>
+                    </div>
+                </div>
+            </div>
+          
+            <script>
+                function gfgMenu() {
+                    const GFG = document.querySelector('.links');
+                    const ngh = document.querySelector(".slideshow-container");
+                    if (GFG.style.display === "none") {
+                        GFG.style.display = "block";
+                        ngh.style.display = "none";
+                    }
+                    else {
+                        GFG.style.display = "none";
+                        ngh.style.display = "block";
+                    }
+                }
+            </script>
+        </header>
+        <main>
+            <div class="slideshow-container">
+                    <div class="mySlides fade">
+                      
+                      <img src="./assets/slider/1.jpg" style="width: 132%;">
+                      
+                    </div>
+                    <div class="mySlides fade">
+                      
+                      <img src="./assets/slider/2.jpg" style="width: 132%;" >
+                      
+                    </div>
+                    <div class="mySlides fade">
+                      
+                      <img src="./assets/slider/3.jpg" style="width: 132%;">
+                      
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br>
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
+            <script>
+                var slideIndex = 1;
+                showSlides(slideIndex);
+                
+                function plusSlides(n) {
+                  showSlides(slideIndex += n);
+                }
+                
+                function currentSlide(n) {
+                  showSlides(slideIndex = n);
+                }
+                
+                function showSlides(n) {
+                  var i;
+                  var slides = document.getElementsByClassName("mySlides");
+                  var dots = document.getElementsByClassName("dot");
+                  if (n > slides.length) {slideIndex = 1}    
+                  if (n < 1) {slideIndex = slides.length}
+                  for (i = 0; i < slides.length; i++) {
+                      slides[i].style.display = "none";  
+                  }
+                  for (i = 0; i < dots.length; i++) {
+                      dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block";  
+                  dots[slideIndex-1].className += " active";
+                }
+            </script>
+
+
+            <div class = "sol">
+                <p class="o">Providing Our Clients</p>
+                <p class="t">Best & Creative Solutions</p>
+            </div>
+            <section>
+                <div class = "s1">
+                    <i class="fas fa-cogs fa-3x "></i>
+                    <h4>CREATIVE SOLUTIONS</h4>
+                </div>
+                <div class = "s1">
+                    <i class="fa fa-leaf fa-3x "></i>
+                    <h4>CREATIVE SOLUTIONS</h4>
+                </div>
+                <div class = "s1">
+                    <i class="far fa-heart fa-3x "></i>
+                    <h4>CREATIVE SOLUTIONS</h4>
+                </div>
+                <div class = "s1">
+                    <i class="fas fa-laptop fa-3x "></i>
+                    <h4>CREATIVE SOLUTIONS</h4>
+                </div>
+            </section>
+            <div class ="mf">
+                <p class="ot">Main Features<p>
+                <p class="oh">Bras urna felis accumsan at ultrde cesid posuere masa socis nautoque</p>
+                <p class="of">penat bus maecenas ultrices sed ipsum lorem dolor sit amet sed ipsum consectetur</p>
+            </div>
+            <div class = "ti">
+                <img src="./assets/6.jpg" height="300" width="500">
+                <img src="./assets/5.jpg" height="300" width="500">
+            </div>
+            <div class= "two s1">
+                <i class="fas fa-rocket fa-3x"></i>
+                <div>
+                    <h3>SEO Optimized</h3>
+                    <h5>Cras urna felis accumsan at ultricesid posuere 
+                    masa um socisd natoque penatibus magnisd Lorem 
+                    ipsum dolor sit ame onsectea dipe.</h5>
+                </div>
+                <i class="fas fa-camera"></i>
+                <div>
+                    <h3>Easy to Install</h3>
+                    <h5>Cras urna felis accumsan at ultricesid posuere 
+                    masa um socisd natoque penatibus magnisd Lorem 
+                    ipsum dolor sit ame onsectea dipe.</h5>
+                </div> 
+                <i class="far fa-heart"></i>
+                <div>
+                    <h3>Unlimited Possibilities</h3>
+                    <h5>Cras urna felis accumsan at ultricesid posuere 
+                    masa um socisd natoque penatibus magnisd Lorem 
+                    ipsum dolor sit ame onsectea dipe.</h5>
+                </div>  
+            </div>
+            <section>
+                <div id ="ibc">
+                    <h1>Easily Customizable & Unlimited Support</h1>
+                    <h5>Integer orci enim varius vel accumsan vel porttitor tellus. Vivamus odio. Donec metus libero semper</h5>
+                    <button>PURCHASE NOW</button>
+                    <button>LEARN NOW</button>
+                </div>
+            </section>
+            <div >
+                <p class ="wpi">What People Are</p>
+                <p class= "wpt">Saying About Us</p>
+                <div id="wps">
+                    <div>
+                        <img src="./assets/about/man4.jpg">
+                        <h2>John Doe</h2>
+                        <h4>Lorem ipsum dolor sit amet consectetur adipisicing eil sed deiusmod tempor</h4>
+                    </div>
+                    <div>
+                        <img src="./assets/about/man2.jpg">
+                        <h2>John Doe</h2>
+                        <h4>Lorem ipsum dolor sit amet consectetur adipisicing eil sed deiusmod tempor</h4>
+                    </div>
+                    <div>
+                        <img src="./assets/about/man3.jpg">
+                        <h2>John Doe</h2>
+                        <h4>Lorem ipsum dolor sit amet consectetur adipisicing eil sed deiusmod tempor</h4>
+                    </div>
+                    <div>
+                        <img src="./assets/about/man4.jpg">
+                        <h2>John Doe</h2>
+                        <h4>Lorem ipsum dolor sit amet consectetur adipisicing eil sed deiusmod tempor</h4>
+                    </div>
+                </div>
+            </div>
+            <div id ="mulb">
+                <div id ="mul">
+                    <h3>Multi</h3>
+                    <p>In a elit in lorem congue varius. Sed 
+                        nec arcu. Etiam sit amet augue. Fusce 
+                        fermen tum neque a rutrum varius odio 
+                        pede ullamcorp-er tellus ut dignissim 
+                        nisi risus non tortor. Aliquam mollis 
+                        neque.
+                    </p>
+                    <div class="imul">
+                        <i class="fab fa-facebook-f fa-2x" id="f"></i>
+                        <i class="fab fa-twitter fa-2x" id="tw"></i>
+                        <i class="fab fa-linkedin-in fa-2x" id="ldin"></i>
+                        <i class="fab fa-pinterest fa-2x" id="pi"></i>
+                        <i class="fab fa-google-plus fa-2x" id="gp"></i>
+                    </div>
+                </div>
+                <div id="rc">
+                    <h2>RECENT POSTS</h2>
+                    <h3>Awesome Design with Overviews</h3>
+                    <hr>
+                    <h3>Great Design with Features</h3>
+                    <hr>
+                    <h3>Limitless functions & Works</h3>
+                    <hr>
+                    <h3>Multi is simple and clean design</h3>
+                </div>
+                <div id="cci">
+                    <h2>Contact Info</h2>
+                    <i class="fas fa-home fa-2x"> Office # 38, Suite 54 Elizebth Street, Victoria State Newyork, USA 33026
+                    </i>
+                    <hr>
+                    <i class="fas fa-phone-alt fa-2x">+38 000 129900</i>
+                    <hr>
+                    <i class="far fa-envelope"> info@domain.net</i>
+
+                </div>
+            </div>
+        </main>
+        <footer>
+            <h5 id="new"> &#169; Multi Theme. All Rights Reserved.
+                Bootstrap Themes by BootstrapMade</h5>
+            <h5>Home</h5>
+            <h5>Services</h5>
+            <h5>Blog</h5>
+            <h5>Portfolio</h5>
+            <h5>Contant</h5>
+        </footer>
+    </body>
+</html>
