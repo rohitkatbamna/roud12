@@ -12,104 +12,61 @@
         </head>
     <body>
         <header>
-            <nav>
-                <h1><span>M</span>Multi</h1>
-                <h2><span>HOME</span></h2>
-                <h2>SERVICES</h2>
-                <h2>BLOG</h2>
-                <h2>PORTFOLIO</h2>
-                <h2>CONTACT</h2>
-            </nav>
-
-            <div class="container">
-                <div class="navbar">
-                    <div class="heading">
-                        <a href="#hamburger-icon" onclick="gfgMenu()">
-                            <i class="fa fa-bars"></i>
-                        </a>
-                        <a href="#Home"><span>M</span>ulti</a>
-                    </div>
-                    <div class="links">
-                        <a href="#gfg1">HOME</a>
-                        <a href="#gfg2">SERVICES</a>
-                        <a href="#gfg3">BLOG</a>
-                        <a href="#gfg4">PORTFOLIO</a>
-                        <a href="#gfg5">CONTACT</a>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand fs-2 fw-bold" href="#"><span class="text-danger">M</span>Multi</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto fs-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">SERVICES</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">BLOG</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">PORTFOLIO</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">CONTACT</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-            </div>
-          
-            <script>
-                function gfgMenu() {
-                    const GFG = document.querySelector('.links');
-                    const ngh = document.querySelector(".slideshow-container");
-                    if (GFG.style.display === "none") {
-                        GFG.style.display = "block";
-                        ngh.style.display = "none";
-                    }
-                    else {
-                        GFG.style.display = "none";
-                        ngh.style.display = "block";
-                    }
-                }
-            </script>
+            </nav>
         </header>
         <main>
-            <div class="slideshow-container">
-                    <div class="mySlides fade">
-                      
-                      <img src="./assets/slider/1.jpg" style="width: 132%;" alt="sure">
-                      
-                    </div>
-                    <div class="mySlides fade">
-                      
-                      <img src="./assets/slider/2.jpg" style="width: 132%;" alt="sure">
-                      
-                    </div>
-                    <div class="mySlides fade">
-                      
-                      <img src="./assets/slider/3.jpg" style="width: 132%;" alt="sure">
-                      
-                    </div>
-                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                <br>
-                <div style="text-align:center">
-                    <span class="dot" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span>
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="./assets/slider/1.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./assets/slider/2.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./assets/slider/3.jpg" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
             </div>
-            <script>
-                var slideIndex = 1;
-                showSlides(slideIndex);
-                
-                function plusSlides(n) {
-                  showSlides(slideIndex += n);
-                }
-                
-                function currentSlide(n) {
-                  showSlides(slideIndex = n);
-                }
-                
-                function showSlides(n) {
-                  var i;
-                  var slides = document.getElementsByClassName("mySlides");
-                  var dots = document.getElementsByClassName("dot");
-                  if (n > slides.length) {slideIndex = 1}    
-                  if (n < 1) {slideIndex = slides.length}
-                  for (i = 0; i < slides.length; i++) {
-                      slides[i].style.display = "none";  
-                  }
-                  for (i = 0; i < dots.length; i++) {
-                      dots[i].className = dots[i].className.replace(" active", "");
-                  }
-                  slides[slideIndex-1].style.display = "block";  
-                  dots[slideIndex-1].className += " active";
-                }
-            </script>
-
-
             <div class = "sol">
                 <p class="o">Providing Our Clients</p>
                 <p class="t">Best & Creative Solutions</p>
