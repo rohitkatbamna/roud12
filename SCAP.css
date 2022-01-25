@@ -4,4 +4,10 @@
     background-color: green;
     border-radius: 40px;
     color: white;
+    margin-bottom: 100px;
+}
+
+.circle-green:hover {
+    color: green;
+    background-color: white;
 }
