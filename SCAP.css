@@ -1,13 +1,13 @@
 .circle-green {
     height: 70px;
     width: 70px;
-    background-color: green;
+    background-color: #FF4E37;
     border-radius: 40px;
     color: white;
     margin-bottom: 100px;
 }
 
 .circle-green:hover {
-    color: green;
+    color: #FF4E37;
     background-color: white;
 }
