@@ -1,19 +1,23 @@
 .circle-green {
-    height: 80px;
-    width: 80px;
-    background-color: #FF4E37;
-    border-radius: 40px;
-    color: white;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 100px;
+	height: 80px;
+	width: 80px;
+	background-color: #ff4e37;
+	border-radius: 40px;
+	color: white;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 100px;
 }
 
 i {
-    margin-top: 14px;
+	margin-top: 14px;
 }
 
 .circle-green:hover {
-    color: #FF4E37;
-    background-color: white;
+	color: #ff4e37;
+	background-color: white;
+}
+.changedec {
+	text-decoration: none;
+	color: white;
 }
