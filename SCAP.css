@@ -21,3 +21,8 @@ i {
 	text-decoration: none;
 	color: white;
 }
+#givemeflexrow {
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
+}
