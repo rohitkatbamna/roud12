@@ -26,8 +26,16 @@ i {
 	justify-content: space-around;
 	flex-direction: row;
 }
+.addamargin {
+	margin-right: 100px;
+}
 @media only screen and (max-width: 769px) {
 	#givemeflexrow {
 		flex-direction: column;
+	}
+}
+@media only screen and (max-width: 400px) {
+	.addamargin {
+		margin-right: 10px;
 	}
 }
